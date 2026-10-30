@@ -1,0 +1,4 @@
+
+Although the original anji code distribution includes the following LICENSE.txt (GNU GENERAL PUBLIC LICENSE Version 2, June 1991), the sourceforge repo indicates Apache License V2.0 , BSD License, so we assume the latter is the effective license and adopt those (Apache License V2.0, BSD License).
+
+See https://sourceforge.net/projects/anji/

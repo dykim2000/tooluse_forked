@@ -1,0 +1,19 @@
+<chromosome id="5775" primary-parent-id="2866"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-2.0"/>
+<connection id="7" src-id="1" dest-id="5" weight="0.537666203919207"/>
+<connection id="8" src-id="2" dest-id="5" weight="1.445541033135562"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="0.10204309223080932"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<connection id="14" src-id="2" dest-id="11" weight="-0.010846631860071065"/>
+<connection id="15" src-id="3" dest-id="11" weight="1.7680156540954024"/>
+<connection id="16" src-id="4" dest-id="11" weight="-0.002861903874610494"/>
+<neuron id="259" type="hid" activation="tanh"/>
+<connection id="260" src-id="3" dest-id="259" weight="-0.36403694983532087"/>
+<connection id="261" src-id="259" dest-id="5" weight="0.5517985614472098"/>
+</chromosome>

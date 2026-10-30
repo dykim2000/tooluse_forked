@@ -1,0 +1,44 @@
+digraph G {
+rankdir=BT;
+n0 [shape="box" label="I_0", fillcolor="red" style="filled", pos="1.5,6.5!"];
+n1 [shape="box" label="I_1", fillcolor="red" style="filled", pos="3.0,6.5!"];
+n2 [shape="box" label="I_2", fillcolor="red" style="filled", pos="4.5,6.5!"];
+n3 [shape="box" label="I_3", fillcolor="red" style="filled", pos="6.0,6.5!"];
+n4 [shape="box" label="I_4", fillcolor="red" style="filled", pos="7.5,6.5!"];
+n5 [shape="box" label="I_5", fillcolor="red" style="filled", pos="9.0,6.5!"];
+n6 [shape="box" label="I_6", fillcolor="red" style="filled", pos="10.5,6.5!"];
+n7 [shape="box" label="I_7", fillcolor="red" style="filled", pos="12.0,6.5!"];
+n8 [shape="box" label="I_8", fillcolor="red" style="filled", pos="13.5,6.5!"];
+n9 [shape="box" label="I_9", fillcolor="red" style="filled", pos="15.0,6.5!"];
+n10 [shape="circle" label="O_10", fillcolor="green" style="filled", pos="1.5,0.5!"];
+n21 [shape="circle" label="O_21", fillcolor="green" style="filled", pos="3.0,0.5!"];
+n234 [shape="hexagon", label="h_234", fillcolor="orange" style="filled"];
+n237 [shape="hexagon", label="h_237", fillcolor="orange" style="filled"];
+n0 -> n10 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n1 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n2 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n3 -> n10 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n4 -> n10 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n5 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n6 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n7 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n8 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n2 -> n21 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n3 -> n21 [style=bold, arrowsize=2.0, arrowhead=normal];
+n4 -> n21 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n5 -> n21 [style=bold, arrowsize=2.0, arrowhead=normal];
+n6 -> n21 [style=bold, arrowsize=2.0, arrowhead=normal];
+n7 -> n21 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n8 -> n21 [style=bold, arrowsize=2.0, arrowhead=normal];
+n9 -> n21 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n10 -> n10 [style=bold, arrowsize=2.0, arrowhead=normal];
+n9 -> n234 [style=bold, arrowsize=2.0, arrowhead=normal];
+n234 -> n10 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n0 -> n237 [style=bold, arrowsize=2.0, arrowhead=normal];
+n237 -> n21 [style=bold, arrowsize=2.0, arrowhead=normal];
+n3 -> n234 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n2 -> n234 [style=dashed, arrowsize=1.0, arrowhead=dot];
+n4 -> n237 [style=bold, arrowsize=2.0, arrowhead=normal];
+{rank = min;"n0";"n1";"n2";"n3";"n4";"n5";"n6";"n7";"n8";"n9";}
+{rank = max;"n10";"n21";}
+}

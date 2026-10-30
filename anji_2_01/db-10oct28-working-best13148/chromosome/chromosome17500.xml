@@ -1,0 +1,49 @@
+<chromosome id="17500" primary-parent-id="16962"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-2.0"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.962829946796282"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<connection id="15" src-id="3" dest-id="11" weight="1.0160360447330825"/>
+<connection id="223" src-id="5" dest-id="11" weight="0.510881209161224"/>
+<neuron id="262" type="hid" activation="tanh"/>
+<connection id="263" src-id="4" dest-id="262" weight="2.0"/>
+<neuron id="271" type="hid" activation="tanh"/>
+<connection id="272" src-id="4" dest-id="271" weight="0.2282552729098397"/>
+<connection id="461" src-id="0" dest-id="262" weight="2.0"/>
+<connection id="656" src-id="1" dest-id="262" weight="-0.27429965092178366"/>
+<connection id="662" src-id="11" dest-id="262" weight="-1.9010416378371857"/>
+<connection id="664" src-id="271" dest-id="262" weight="2.0"/>
+<connection id="856" src-id="2" dest-id="271" weight="-1.2633349150102238"/>
+<neuron id="874" type="hid" activation="tanh"/>
+<connection id="875" src-id="4" dest-id="874" weight="0.8793214043287398"/>
+<neuron id="877" type="hid" activation="tanh"/>
+<connection id="879" src-id="877" dest-id="5" weight="-1.153340217732926"/>
+<connection id="1075" src-id="3" dest-id="874" weight="0.3057300620683403"/>
+<connection id="1076" src-id="3" dest-id="271" weight="-1.4605936273108315"/>
+<connection id="1266" src-id="874" dest-id="5" weight="0.9745351714598064"/>
+<neuron id="1281" type="hid" activation="tanh"/>
+<connection id="1283" src-id="1281" dest-id="271" weight="2.0"/>
+<connection id="1460" src-id="877" dest-id="262" weight="1.9004818357350288"/>
+<connection id="1649" src-id="1281" dest-id="1281" weight="-2.0"/>
+<connection id="1650" src-id="5" dest-id="1281" weight="-1.2183492317125864"/>
+<connection id="1838" src-id="874" dest-id="874" weight="-2.0"/>
+<neuron id="1860" type="hid" activation="tanh"/>
+<connection id="1861" src-id="262" dest-id="1860" weight="1.3725319223348131"/>
+<connection id="1862" src-id="1860" dest-id="877" weight="-0.6543214101565692"/>
+<connection id="2222" src-id="0" dest-id="874" weight="-2.0"/>
+<neuron id="4039" type="hid" activation="tanh"/>
+<connection id="4040" src-id="0" dest-id="4039" weight="2.0"/>
+<connection id="4041" src-id="4039" dest-id="271" weight="0.3235528237369314"/>
+<neuron id="7159" type="hid" activation="tanh"/>
+<connection id="7160" src-id="1" dest-id="7159" weight="1.7638782475331503"/>
+<connection id="7161" src-id="7159" dest-id="1281" weight="2.0"/>
+<connection id="9552" src-id="877" dest-id="1281" weight="0.502328634262085"/>
+<connection id="12287" src-id="7159" dest-id="7159" weight="-1.0003461378973604"/>
+<connection id="14451" src-id="877" dest-id="7159" weight="-2.0"/>
+<connection id="14625" src-id="7159" dest-id="877" weight="0.37250361306867597"/>
+</chromosome>

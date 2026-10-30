@@ -1,0 +1,20 @@
+<chromosome id="8561" primary-parent-id="8352"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-2.0"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.0"/>
+<connection id="8" src-id="2" dest-id="5" weight="2.0"/>
+<connection id="9" src-id="3" dest-id="5" weight="-2.0"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="-2.0"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<connection id="15" src-id="3" dest-id="11" weight="2.0"/>
+<connection id="16" src-id="4" dest-id="11" weight="0.738985205274949"/>
+<connection id="253" src-id="11" dest-id="5" weight="2.0"/>
+<neuron id="258" type="hid" activation="tanh"/>
+<connection id="259" src-id="2" dest-id="258" weight="0.6741494129008158"/>
+<connection id="260" src-id="258" dest-id="11" weight="2.0"/>
+</chromosome>

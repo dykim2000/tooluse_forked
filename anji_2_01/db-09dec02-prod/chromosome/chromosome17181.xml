@@ -1,0 +1,33 @@
+<chromosome id="17181" primary-parent-id="6731"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.0"/>
+<connection id="9" src-id="3" dest-id="5" weight="-0.611000610434203"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="-0.7987216657341867"/>
+<connection id="13" src-id="1" dest-id="11" weight="0.3737102787047335"/>
+<connection id="16" src-id="4" dest-id="11" weight="2.0"/>
+<neuron id="258" type="hid" activation="tanh"/>
+<connection id="259" src-id="2" dest-id="258" weight="1.9367781403477844"/>
+<connection id="260" src-id="258" dest-id="11" weight="-0.0945046111450687"/>
+<neuron id="261" type="hid" activation="tanh"/>
+<connection id="262" src-id="0" dest-id="261" weight="1.1766544281822662"/>
+<connection id="263" src-id="261" dest-id="5" weight="-2.0"/>
+<neuron id="264" type="hid" activation="tanh"/>
+<connection id="265" src-id="2" dest-id="264" weight="2.0"/>
+<connection id="266" src-id="264" dest-id="5" weight="-0.44455594741854987"/>
+<connection id="436" src-id="2" dest-id="261" weight="-2.0"/>
+<neuron id="467" type="hid" activation="tanh"/>
+<connection id="468" src-id="3" dest-id="467" weight="2.0"/>
+<connection id="469" src-id="467" dest-id="11" weight="1.6175625416420472"/>
+<connection id="648" src-id="3" dest-id="261" weight="-0.8995987367983506"/>
+<connection id="655" src-id="4" dest-id="264" weight="-1.3220178156081683"/>
+<connection id="666" src-id="2" dest-id="467" weight="-2.0"/>
+<connection id="669" src-id="264" dest-id="11" weight="2.0"/>
+<connection id="671" src-id="5" dest-id="258" weight="-2.0"/>
+<connection id="2231" src-id="258" dest-id="264" weight="0.8064761102038102"/>
+<connection id="3797" src-id="261" dest-id="258" weight="2.0"/>
+</chromosome>

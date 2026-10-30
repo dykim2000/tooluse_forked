@@ -1,0 +1,37 @@
+<chromosome id="17503" primary-parent-id="17195"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-2.0"/>
+<connection id="8" src-id="2" dest-id="5" weight="2.0"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<neuron id="262" type="hid" activation="tanh"/>
+<connection id="263" src-id="4" dest-id="262" weight="2.0"/>
+<connection id="264" src-id="262" dest-id="5" weight="-2.0"/>
+<neuron id="271" type="hid" activation="tanh"/>
+<connection id="272" src-id="4" dest-id="271" weight="0.7261438214920121"/>
+<connection id="273" src-id="271" dest-id="11" weight="-0.5700455874490624"/>
+<connection id="461" src-id="0" dest-id="262" weight="2.0"/>
+<neuron id="467" type="hid" activation="tanh"/>
+<connection id="468" src-id="3" dest-id="467" weight="-0.09844033385151718"/>
+<connection id="469" src-id="467" dest-id="11" weight="2.0"/>
+<connection id="655" src-id="3" dest-id="262" weight="-0.01025292424422894"/>
+<connection id="664" src-id="271" dest-id="262" weight="1.704337128164941"/>
+<neuron id="677" type="hid" activation="tanh"/>
+<connection id="678" src-id="2" dest-id="677" weight="-0.2467523620815506"/>
+<connection id="679" src-id="677" dest-id="11" weight="-0.4409959425420442"/>
+<neuron id="874" type="hid" activation="tanh"/>
+<connection id="875" src-id="4" dest-id="874" weight="2.0"/>
+<connection id="1075" src-id="3" dest-id="874" weight="1.2643402433242816"/>
+<neuron id="1281" type="hid" activation="tanh"/>
+<connection id="1282" src-id="874" dest-id="1281" weight="1.3641992052675151"/>
+<connection id="1283" src-id="1281" dest-id="271" weight="2.0"/>
+<connection id="1650" src-id="5" dest-id="1281" weight="-2.0"/>
+<neuron id="1656" type="hid" activation="tanh"/>
+<connection id="1657" src-id="874" dest-id="1656" weight="2.0"/>
+<connection id="1658" src-id="1656" dest-id="5" weight="-0.9520719409155443"/>
+<connection id="13921" src-id="1656" dest-id="1656" weight="-1.2970322706859805"/>
+</chromosome>

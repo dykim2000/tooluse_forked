@@ -1,0 +1,5 @@
+ANJI v2.0, Copyright (C) 2004 Derek James and Philip Tucker
+ANJI comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it
+under the conditions of the GNU General Public License.
+usage: <cmd> <properties-file> <chromosome-id1> [<chromosome-id2> <chromosome-id3> ...]

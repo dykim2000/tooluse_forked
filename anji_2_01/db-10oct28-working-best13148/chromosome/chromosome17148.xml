@@ -1,0 +1,18 @@
+<chromosome id="17148" primary-parent-id="13148"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-2.0"/>
+<connection id="8" src-id="2" dest-id="5" weight="2.0"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="2.0"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<connection id="15" src-id="3" dest-id="11" weight="2.0"/>
+<connection id="16" src-id="4" dest-id="11" weight="0.019008707190760976"/>
+<connection id="235" src-id="11" dest-id="5" weight="0.9795816684259748"/>
+<neuron id="677" type="hid" activation="tanh"/>
+<connection id="678" src-id="2" dest-id="677" weight="1.0"/>
+<connection id="679" src-id="677" dest-id="11" weight="-1.85598030489558"/>
+</chromosome>

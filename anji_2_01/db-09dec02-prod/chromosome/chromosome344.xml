@@ -1,0 +1,18 @@
+<chromosome id="344" primary-parent-id="86" secondary-parent-id="157"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.2807329590051035"/>
+<connection id="7" src-id="1" dest-id="5" weight="1.0838468022560077"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.3602846201810881"/>
+<connection id="9" src-id="3" dest-id="5" weight="-0.3488529920578003"/>
+<connection id="10" src-id="4" dest-id="5" weight="0.09740169292313483"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="-0.4937264461526145"/>
+<connection id="13" src-id="1" dest-id="11" weight="-1.3317889652504107"/>
+<connection id="14" src-id="2" dest-id="11" weight="0.6257861589677713"/>
+<connection id="15" src-id="3" dest-id="11" weight="0.7084920406341553"/>
+<connection id="16" src-id="4" dest-id="11" weight="-0.22682462444424267"/>
+</chromosome>

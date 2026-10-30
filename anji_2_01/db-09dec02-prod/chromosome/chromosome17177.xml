@@ -1,0 +1,32 @@
+<chromosome id="17177" primary-parent-id="11156"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.6566988432159324"/>
+<connection id="7" src-id="1" dest-id="5" weight="-0.7224774644340095"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.34723094320573944"/>
+<connection id="9" src-id="3" dest-id="5" weight="0.9330974485165271"/>
+<connection id="10" src-id="4" dest-id="5" weight="0.03776492839867729"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="13" src-id="1" dest-id="11" weight="-1.7377988589251103"/>
+<connection id="15" src-id="3" dest-id="11" weight="2.0"/>
+<connection id="16" src-id="4" dest-id="11" weight="2.0"/>
+<connection id="229" src-id="11" dest-id="11" weight="-1.0411208695210217"/>
+<connection id="250" src-id="5" dest-id="11" weight="2.0"/>
+<neuron id="258" type="hid" activation="tanh"/>
+<connection id="259" src-id="2" dest-id="258" weight="0.0423337755703892"/>
+<connection id="260" src-id="258" dest-id="11" weight="-0.9858113486640714"/>
+<connection id="443" src-id="258" dest-id="5" weight="-2.0"/>
+<connection id="453" src-id="1" dest-id="258" weight="0.7536104673325793"/>
+<neuron id="461" type="hid" activation="tanh"/>
+<connection id="462" src-id="0" dest-id="461" weight="1.5488463733249178"/>
+<connection id="640" src-id="4" dest-id="461" weight="0.41883052101835094"/>
+<connection id="641" src-id="2" dest-id="461" weight="-0.24595959897930386"/>
+<connection id="645" src-id="11" dest-id="461" weight="1.2757391611546485"/>
+<connection id="674" src-id="461" dest-id="461" weight="0.7567997826818068"/>
+<neuron id="691" type="hid" activation="tanh"/>
+<connection id="692" src-id="461" dest-id="691" weight="-0.19642205973604554"/>
+<connection id="693" src-id="691" dest-id="11" weight="0.10114148379880405"/>
+</chromosome>

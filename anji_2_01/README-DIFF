@@ -1,0 +1,61 @@
+
+anji_2_01 is the modified version.
+anji_2_01-orig is the original anji code.
+
+Only in anji_2_01: bin
+Only in anji_2_01: build.sh
+Only in anji_2_01: .classpath
+Only in anji_2_01: conf.09nov16
+Only in anji_2_01: conf.09nov16-v2
+Only in anji_2_01: conf.09nov17
+Common subdirectories: anji_2_01/db and anji_2_01-orig/db
+Only in anji_2_01: db-09dec01-v1
+Only in anji_2_01: db-09dec02-prod
+Only in anji_2_01: db-09nov16
+Only in anji_2_01: db-09nov16-old
+Only in anji_2_01: db-09novXX
+Only in anji_2_01: db-10oct28-working-best13148
+Only in anji_2_01: db-old
+Only in anji_2_01: db-premature
+Only in anji_2_01: db-scrap
+Common subdirectories: anji_2_01/docs and anji_2_01-orig/docs
+Only in anji_2_01: .DS_Store
+Files anji_2_01/evaluate.sh and anji_2_01-orig/evaluate.sh differ
+Files anji_2_01/evolve.sh and anji_2_01-orig/evolve.sh differ
+Only in anji_2_01: .gitignore
+Common subdirectories: anji_2_01/images and anji_2_01-orig/images
+Common subdirectories: anji_2_01/lib and anji_2_01-orig/lib
+Only in anji_2_01: navi_evaluate.sh
+Common subdirectories: anji_2_01/nevt and anji_2_01-orig/nevt
+Only in anji_2_01: nohup.out
+Only in anji_2_01: out.
+Only in anji_2_01: out.1237
+Only in anji_2_01: out.13148
+Only in anji_2_01: out.17643
+Only in anji_2_01: out.2239
+Only in anji_2_01: prob.g.
+Only in anji_2_01: prob.g.1237
+Only in anji_2_01: prob.g.13148
+Only in anji_2_01: prob.g.17643
+Only in anji_2_01: prob.g.2239
+Only in anji_2_01: prob.s.
+Only in anji_2_01: prob.s.1237
+Only in anji_2_01: prob.s.13148
+Only in anji_2_01: prob.s.17643
+Only in anji_2_01: prob.s.2239
+Only in anji_2_01: .project
+Common subdirectories: anji_2_01/properties and anji_2_01-orig/properties
+Only in anji_2_01: README-choe
+Only in anji_2_01: README-DIFF
+Only in anji_2_01: run
+Only in anji_2_01: runplot
+Only in anji_2_01: scratch
+Common subdirectories: anji_2_01/src and anji_2_01-orig/src
+Common subdirectories: anji_2_01/test and anji_2_01-orig/test
+Only in anji_2_01: tmp
+Only in anji_2_01: tools
+Only in anji_2_01: traj.
+Only in anji_2_01: traj.1237
+Only in anji_2_01: traj.13148
+Only in anji_2_01: traj.17643
+Only in anji_2_01: traj.2239

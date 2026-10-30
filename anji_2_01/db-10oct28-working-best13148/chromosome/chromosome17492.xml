@@ -1,0 +1,32 @@
+<chromosome id="17492" primary-parent-id="17069"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.2942428142047717"/>
+<connection id="8" src-id="2" dest-id="5" weight="2.0"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<connection id="15" src-id="3" dest-id="11" weight="2.0"/>
+<neuron id="259" type="hid" activation="tanh"/>
+<connection id="260" src-id="3" dest-id="259" weight="-0.8703637341186484"/>
+<connection id="261" src-id="259" dest-id="5" weight="-1.0667181440854847"/>
+<neuron id="271" type="hid" activation="tanh"/>
+<connection id="442" src-id="11" dest-id="271" weight="2.0"/>
+<connection id="640" src-id="4" dest-id="259" weight="0.5021284572598372"/>
+<connection id="652" src-id="259" dest-id="259" weight="-0.004501461982727051"/>
+<neuron id="874" type="hid" activation="tanh"/>
+<connection id="875" src-id="4" dest-id="874" weight="0.49791026662713467"/>
+<connection id="876" src-id="874" dest-id="271" weight="-1.5493745134159178"/>
+<connection id="1080" src-id="5" dest-id="271" weight="1.4851821448060556"/>
+<neuron id="1848" type="hid" activation="tanh"/>
+<connection id="1850" src-id="1848" dest-id="5" weight="0.5022037686759929"/>
+<connection id="2227" src-id="11" dest-id="874" weight="-0.03586939324442484"/>
+<connection id="5409" src-id="5" dest-id="1848" weight="-2.0"/>
+<neuron id="5594" type="hid" activation="tanh"/>
+<connection id="5595" src-id="11" dest-id="5594" weight="-1.1487734526530173"/>
+<connection id="5596" src-id="5594" dest-id="1848" weight="-0.07880476155570493"/>
+<connection id="10389" src-id="5594" dest-id="271" weight="1.914502076227861"/>
+<connection id="10901" src-id="271" dest-id="5594" weight="2.0"/>
+</chromosome>

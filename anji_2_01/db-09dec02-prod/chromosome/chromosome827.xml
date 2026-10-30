@@ -1,0 +1,18 @@
+<chromosome id="827" primary-parent-id="573"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-1.7622278886151832"/>
+<connection id="7" src-id="1" dest-id="5" weight="-1.7121592545528246"/>
+<connection id="8" src-id="2" dest-id="5" weight="-0.22325608284637322"/>
+<connection id="9" src-id="3" dest-id="5" weight="1.3862337013575936"/>
+<connection id="10" src-id="4" dest-id="5" weight="0.7259730100631714"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="2.0"/>
+<connection id="13" src-id="1" dest-id="11" weight="-1.8247662865243395"/>
+<connection id="14" src-id="2" dest-id="11" weight="-1.6116795224628713"/>
+<connection id="15" src-id="3" dest-id="11" weight="2.0"/>
+<connection id="16" src-id="4" dest-id="11" weight="-0.3826894760131836"/>
+</chromosome>

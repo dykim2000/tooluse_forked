@@ -1,0 +1,12 @@
+./properties:./lib/anji.jar:./lib/choe.jar:./lib/clibwrapper_jiio.jar:./lib/hb16.jar:./lib/jai_imageio.jar:./lib/jakarta-regexp-1.3.jar:./lib/jcommon.jar:./lib/jfreechart.jar:./lib/jgap.jar:./lib/jmagick.jar:./lib/junit.jar:./lib/log4j.jar:./lib/mlibwrapper_jai.jar
+args = navi.properties
+INFO  Properties: ann.type == anji
+INFO  Properties: recurrent.cycles == 1
+INFO  Properties: recurrent == best_guess
+INFO  Properties: navi.arena.x == null [40.0]
+INFO  Properties: navi.arena.y == null [40.0]
+INFO  Properties: navi.maxsteps == 2000
+INFO  Properties: navi.numtrials == 10
+INFO  Properties: random.seed == null [1259696744561]
+INFO  Properties: persistence.class == com.anji.persistence.FilePersistence
+INFO  Properties: base.dir == ./db

@@ -1,0 +1,18 @@
+<chromosome id="123"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="6" src-id="0" dest-id="5" weight="-0.4126962423324585"/>
+<connection id="7" src-id="1" dest-id="5" weight="-0.9645522832870483"/>
+<connection id="8" src-id="2" dest-id="5" weight="0.6329936981201172"/>
+<connection id="9" src-id="3" dest-id="5" weight="-0.07129645347595215"/>
+<connection id="10" src-id="4" dest-id="5" weight="0.13402581214904785"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="0.33815228939056396"/>
+<connection id="13" src-id="1" dest-id="11" weight="-0.6382759809494019"/>
+<connection id="14" src-id="2" dest-id="11" weight="0.6525367498397827"/>
+<connection id="15" src-id="3" dest-id="11" weight="0.13381588459014893"/>
+<connection id="16" src-id="4" dest-id="11" weight="-0.26148390769958496"/>
+</chromosome>

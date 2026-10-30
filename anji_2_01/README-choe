@@ -1,0 +1,43 @@
+
+Simple navigation demo 
+
+- Yoonsuck Choe
+
+* See README-DIFF for differences between the original anji code and this modified version.
+
+Train:
+        ./evolve.sh navi.properties
+	
+
+	* result will go in: 
+
+		db/ ...
+
+	  and output will be dumped on your screen.
+
+	* You can find the chromosomes specifying
+	  network topology in
+	
+                	db/chromosome/13178.xml
+
+Test:
+
+        ./navi_evaluate.sh navi.properties 13178
+		
+		* use the chromosome number for best individual
+
+configuration files
+
+        properties/...
+                navi.properties
+                xor.properties
+
+soruce files : These are new, compared to the original anji code
+
+	src/com/anji/navi/ .....
+
+	
+	* To build a file after modifying, do, e.g.,
+
+		./build.sh src/com/anji/navi/NaviFitnessFunction.java
+

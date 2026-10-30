@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ ./navi_evaluate.sh navi.properties $1 > out.$1
+grep RTVprob out.$1 | awk '{print $2,$3}' > prob.s.$1
+grep RTVprob out.$1 | awk '{print $4,$5}' > prob.g.$1
+grep RTVtraj out.$1 | awk '{print $2,$3}' > traj.$1
+mplotdat -c "1:2,1:2,1:2" -l "Traj:Start:Goal" -w "lines:points:points" -C traj.$1 prob.s.$1 prob.g.$1

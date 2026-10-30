@@ -1,0 +1,38 @@
+<chromosome id="16583" primary-parent-id="16245"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="9" src-id="3" dest-id="5" weight="0.38550467007779665"/>
+<connection id="10" src-id="4" dest-id="5" weight="0.013291844546764645"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="13" src-id="1" dest-id="11" weight="-1.1551594105510856"/>
+<connection id="14" src-id="2" dest-id="11" weight="-2.0"/>
+<connection id="15" src-id="3" dest-id="11" weight="2.0"/>
+<connection id="16" src-id="4" dest-id="11" weight="0.03784273448230424"/>
+<neuron id="261" type="hid" activation="tanh"/>
+<connection id="262" src-id="0" dest-id="261" weight="2.0"/>
+<connection id="263" src-id="261" dest-id="5" weight="1.162565209363525"/>
+<neuron id="264" type="hid" activation="tanh"/>
+<connection id="265" src-id="2" dest-id="264" weight="1.7447789796688629"/>
+<connection id="266" src-id="264" dest-id="5" weight="2.0"/>
+<neuron id="270" type="hid" activation="tanh"/>
+<connection id="271" src-id="1" dest-id="270" weight="-1.0496998780333744"/>
+<connection id="272" src-id="270" dest-id="5" weight="-0.7985034908703932"/>
+<connection id="457" src-id="1" dest-id="264" weight="-2.0"/>
+<neuron id="461" type="hid" activation="tanh"/>
+<connection id="462" src-id="0" dest-id="461" weight="1.649864986417365"/>
+<connection id="463" src-id="461" dest-id="11" weight="-0.2279969880913737"/>
+<connection id="640" src-id="4" dest-id="461" weight="0.11978524507536298"/>
+<connection id="647" src-id="0" dest-id="270" weight="1.5094500772143107"/>
+<connection id="648" src-id="3" dest-id="261" weight="-2.0"/>
+<connection id="654" src-id="0" dest-id="264" weight="0.13730881082958346"/>
+<connection id="888" src-id="270" dest-id="11" weight="2.0"/>
+<connection id="1677" src-id="270" dest-id="264" weight="-2.0"/>
+<connection id="3290" src-id="261" dest-id="461" weight="0.29826998089426804"/>
+<connection id="3296" src-id="261" dest-id="264" weight="0.02431774139404297"/>
+<neuron id="6710" type="hid" activation="tanh"/>
+<connection id="6711" src-id="261" dest-id="6710" weight="1.0"/>
+<connection id="6712" src-id="6710" dest-id="270" weight="1.044061596084573"/>
+</chromosome>

@@ -1,0 +1,33 @@
+double stepFactor = ((finalStepSum-1)/numTrials)/(maxTimesteps); 
+			double countFactor = (2.0*countReaches)/(double)numTrials;
+			double toolFactor = countHold/(double)numTrials;
+fitness = (1.0-stepFactor)*toolFactor*countFactor
+200-generation 120-population 70%-rate
+
+double stepFactor = ((finalStepSum-1)/numTrials)/(maxTimesteps); 
+			double countFactor = (countReaches)/(double)numTrials;
+			double toolFactor = countHold/(double)numTrials;
+fitness = (1.0-stepFactor)*toolFactor*countFactor;
+200-generation 120-population 76.6%-rate
+
+fitness = (1.0-stepFactor)*countFactor;
+113-generation 120-population 45.6%-rate
+
+50-generation 120-population with toolFactor and then 
+50-generation 120-population with smoothed toolFactor 76.4%-rate and then
+25-generation 120-population without toolFactor 77%-rate and then
+25-generation 120-population without toolFactor 75%-rate and then
+25-generation 120-population without toolFactor 73.8%-rate and then
+25-generation 120-population without toolFactor 68.8%-rate.
+
+fixed tool:
+training - 150 generations, 100 populations
+pick-up out of 100: 99 98 96 99 99 98 98 100 99 99
+
+random-tool-no-toolFitness:
+training - 150 generations, 100 populations
+pick-up out of 100: 67 70 72 73 73 73 71 71 70 68
+
+random-tool-with-toolFitness:
+training - 150 generations, 100 populations
+pick-up out of 100: 79 79 77 78 89 80 77 79 80 70

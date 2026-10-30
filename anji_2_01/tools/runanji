@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# == 0 ] ; then
+	cat <<EOF
+usage: runanji <dbdir> <chromosome-id>
+
+	run in the anji directory, right above the db directory.
+	need ./tmp directory.
+
+EOF
+	exit
+fi
+
+anji2dot.pl ./$1/chromosome/chromosome$2.xml > ~/tmp/navi.dot ; pushd ~/tmp; dot -Tps -o navi.ps navi.dot ; gv navi.ps; popd
+

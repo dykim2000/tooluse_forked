@@ -1,0 +1,38 @@
+<chromosome id="1380" primary-parent-id="1128"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="in" activation="linear"/>
+<neuron id="6" type="in" activation="linear"/>
+<neuron id="7" type="in" activation="linear"/>
+<neuron id="8" type="in" activation="linear"/>
+<neuron id="9" type="in" activation="linear"/>
+<neuron id="10" type="out" activation="sigmoid"/>
+<connection id="12" src-id="1" dest-id="10" weight="1.0986741975398102"/>
+<connection id="13" src-id="2" dest-id="10" weight="1.09212402721854"/>
+<connection id="14" src-id="3" dest-id="10" weight="-7.403703318027988"/>
+<connection id="15" src-id="4" dest-id="10" weight="-1.227159675429384"/>
+<connection id="16" src-id="5" dest-id="10" weight="-0.39586645964418654"/>
+<connection id="17" src-id="6" dest-id="10" weight="-0.2881778334034778"/>
+<connection id="18" src-id="7" dest-id="10" weight="7.847334172495772"/>
+<connection id="19" src-id="8" dest-id="10" weight="-5.165885516577276"/>
+<connection id="20" src-id="9" dest-id="10" weight="1.8064057241675109"/>
+<neuron id="21" type="out" activation="sigmoid"/>
+<connection id="22" src-id="0" dest-id="21" weight="-9.574626286259104"/>
+<connection id="24" src-id="2" dest-id="21" weight="-0.3082022988757951"/>
+<connection id="25" src-id="3" dest-id="21" weight="7.674054452222947"/>
+<connection id="26" src-id="4" dest-id="21" weight="2.4757857810921724"/>
+<connection id="29" src-id="7" dest-id="21" weight="-10.0"/>
+<connection id="30" src-id="8" dest-id="21" weight="0.388509322813247"/>
+<connection id="31" src-id="9" dest-id="21" weight="6.141309237439248"/>
+<neuron id="239" type="hid" activation="sigmoid"/>
+<connection id="240" src-id="1" dest-id="239" weight="2.2961091315384823"/>
+<connection id="241" src-id="239" dest-id="21" weight="-2.8867183909713314"/>
+<neuron id="391" type="hid" activation="sigmoid"/>
+<connection id="392" src-id="0" dest-id="391" weight="2.141620828386671"/>
+<connection id="393" src-id="391" dest-id="10" weight="-1.8644543589651055"/>
+<connection id="497" src-id="3" dest-id="239" weight="1.6170808146084772"/>
+<connection id="702" src-id="1" dest-id="391" weight="1.6559267118365129"/>
+<connection id="1096" src-id="239" dest-id="391" weight="-2.6005815342802028"/>
+</chromosome>

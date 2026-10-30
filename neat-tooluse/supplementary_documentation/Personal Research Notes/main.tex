@@ -1,0 +1,260 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Tool Use Cognition Research}
+\author{Kiyrah Mowry - kiyrah@tamu.edu}
+\date{September - October 2025}
+
+\begin{document}
+
+\maketitle
+\section{Completed This Week}
+\begin{itemize}
+    \item
+\end{itemize}
+
+\section{Next Steps}
+\begin{itemize}  
+    \item Analyze trends/correlations between number of sticks and hub types (provencial, connector, kinless)
+    \item Find more literature that discusses why hubs and hub density in biological neural networks relate to effectiveness at tool use (check degenerative diseases, motor control, early-childhood development, robotics).
+    \item Rearrange the nodes in anji2dot to graphically group the nodes according to modules.
+    \item Make a trial set of target locations (and potentially stick locations).
+    \item Explore the literature to find more recent complex network analysis measures that have proven useful in other computational neuroscience studies.
+\end{itemize}
+\newpage
+
+\section{Research Questions}
+\begin{itemize}
+    \item By simulating neural networks for learning increasingly complex tool use tasks, can we reveal general principles of network topology that can be applied/adapted to biological networks?
+    \item How does network topology and modular organization evolve as a system learns increasingly complex tasks?
+    \begin{itemize}
+        \item Do they become denser? More nodes? More connections? More hubs proportional to network size? Denser hubs?
+        \item Across generations, are there consistent trends in which nodes are identified as hubs? Do these hubs have a human-interpretable functionality?
+    \end{itemize}
+    \item How can knowledge learned from simulated networks translate to biological networks?
+    \item "Are there sets of brain regions (or modules) that preferentially interact with one another during task performance?" \cite{bassett_learning-induced_2015}.
+\end{itemize}
+
+\section{Unanswered Questions}
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\section{Answered Questions}
+\begin{itemize}
+    \item \textbf{What is the difference between the arrow and the dashed line in the Chromosome plot?} Dashed represents weights $\leq 0$, solid arrows represent weights $> 0$
+    
+    \item \textbf{The current fitness criteria is DST. When the tool isn't held at all, the T is 0, which makes the entire fitness 0 even if the target was successfully reached. This criteria seemed to give positive results in the original paper, but should it maybe be modified to put a greater weight on reaching the target?} We can fine-tune the fitness criteria to improve performance. But we should be careful not to go so far that we are explicitly telling the program how to solve the problem, instead of letting it learn for itself.
+    
+    \item \textbf{Does fitness go up for two sticks if the number of steps is larger?} My current theory is that the two sticks version doesn't have enough time to grab both sticks and get to the target, so extra time would help that, but it would increase the total number of steps for the fitness criteria, so it may cancel itself out. After an experiment of increasing timesteps from 500 to 100, both the average fitness and consistent max fitness went up.
+    
+    \item \textbf{Model architecture: Currently, there's always 10 input parameters, with a pair for relative distance and angle to each stick. When the stick is not in use, these parameters still exist but stay at 0 for input. Do you think it makes more sense to remove the extra input nodes entirely when a stick is not in use?} Keep the extra nodes there, if set to 0, then they won't affect the program negatively. 
+    
+    \item \textbf{I want to make a similar situation to compare 0, 1, and 2 stick scenarios, but some factors make them difficult to set equal parameters. For example, fitness criteria involving tool use doesn't apply to 0 sticks. Also, two sticks may need more steps to be successful because it takes a while to pick up both sticks and move toward the target. Another example is that the number of input chromosomes change to record stick information.} Things such as number of loops can be still compared. But we can do both comparing between models and comparing within each model.
+    
+    \item \textbf{What is the current fitness criteria used in the program?} DST
+    
+    \item \textbf{What is the trigger moment that creates a new Chromosome XML file?} When a new generation occurs in the NEAT algorithm.
+
+    \item \textbf{What does the numbers from the test\_set file represent?} The x and y coordinates of the target. The first number is the number of pairs present in the text file.
+
+    \item \textbf{What is the naming scheme for the Chromosomes?} The chromosome ID comes from a global genome identifier counter. There are gaps because some genomes were evaluated and discarded.
+
+        \item \textbf{Does a new trial represent training a new model from scratch, or does it represent something else entirely?} Each trial represents a reset for choosing a new random target and stick locations. 
+    
+    \item \textbf{In multiple trials, how are sets of genetically-linked chromosome files differentiated?} The trials happen immediately consecutively and influence the creation of generations. So individual trials will not appear consecutively in the output chromosome files.
+
+    \item \textbf{How were the time-lapse graphs made for the arm movement?} They used screen capture from the video and then Imagemagic to merge all the images together.
+
+    \item \textbf{Is the fitness criteria (D, S, and T) something that is calculated after training, or is it used to influence training?} It's the fitness criteria that influences training.
+
+    \item \textbf{The arm appears to continually get “stuck” on the bottom of the screen. Is that something that was encountered last time, and if so, how was it fixed?} Yes, that very much happened in the past. It can get better by training the model more, and possibly by adding noise to the movement.
+
+    \item \textbf{Besides the ones listed below, what are some other interesting metrics that we could use to quantify topology?} Look up Olaf Sporns - Rich Club
+
+    \item \textbf{Regarding the complaint on the synthetic connectomes proposal, what would be your current argument against that?}
+        Reviewer Complaint: "However, it is unlikely that evolving synthetic connectomes to solve simple computational tasks is going to have direct relevance to actual neural circuits or facilitate connectomic analysis. Grounding this type of study in an actual biological problem faced by a small or simple animal (e.g., the small circuits one might find in a fly or nematode) might lead to concrete results of biological relevance. But evolving toy networks to solve abstract tasks is unlikely to yield insights that are readily transferred to neurobiology. Whether this type of work will aid in the analysis of connectomes is doubtful. ." - Dr. Choe's current answer was basically that even with networks where we have all the parameters and situation, we still can't accurately identify why it is doing the things it's doing. So by analyzing synthetic networks, we are making steps towards understanding these kinds of networks in general. Which will one day lead to greater understanding about organic networks such as the connectome.
+\end{itemize}
+
+\section{Program Functionality}
+\subsection{Initial network architecture}
+Number of input nodes: 10\\
+input[0], input[1]: Angle of each arm joint\\
+input[2], input[3]: Relative distance and angle from the end effector to the target\\
+input[4], input[5]: Relative distance and angle from the end effector to stick 1\\
+input[6], input[7]: Relative distance and angle from the end effector to stick 2\\
+input[8], input[9]: Limit detectors that change depending on if the joints reach their limit. This provides feedback to prevent getting stuck at the boundaries.\\
+
+
+\section{Research Direction}
+Can “decision points” in tool use be identified directly from the topology of a neural network?
+
+Is there a correlation between "modularity" in a network topology, and effectiveness at performing tasks?
+
+\subsection{Methodology - Analyze the Network Topology}
+    Criteria:
+    \begin{itemize}
+        \item Total number of loops
+	\item Total number of nodes
+	\item Total number of connections
+        \item Participation coefficient \cite{guimera_functional_2005}
+        \item Percentage of hubs
+        \item Density of hubs
+        \item Overall density of the network
+    \end{itemize}
+
+\subsection{Why do we care?}
+Our networks are intended to simulate real-world human development, such as the use of tools to solve simple tasks. By finding quantifiable connections between topology and key moments in neural evolution, we obtain a stepping stone for:
+\begin{enumerate}
+    \item understanding the "black box" of large artificial networks for human-interpretation of decision making in neural networks.
+    \item Eventually further understanding larger natural networks, such as connectomes.
+\end{enumerate}
+
+\section{Previous Steps}
+\begin{itemize}
+    \item Added my personal notes, example graphs, and research paper draft to the repository so that future researchers can reference them.
+    \item Connected the topics we have back to the literature and wrote more about it.
+    \item Further developed the documentation and instructions so that the next person can jump into the project quickly and easily.
+    \item Cleaned up code to increase readability.
+    \item Met with Mann to introduce him to the project.
+    \item I increased the \# trials to 100 in order to get a more reliable and nuanced reaches value. When I did that, I noticed that even the 0 stick version was starting to overfit and over-complicate the model after more generations.
+    \item I implemented an early-stopping criteria based on a rolling average of the last 10 maximum trials. If the second half didn't reach an average threshold improvement over the first half, then it stops early.
+    \begin{itemize}
+        \item 0 sticks: stopped at generation 50. 1 stick: it stopped at generation 52.
+        \item After that change, I noticed a marked improvement in the top 10 highest chromosomes for 0 sticks. Before, all chromosomes were labelled over 6000 for the id and had a complex structure with many hidden neurons. After the early-stopping criteria, the \% of max reaches stayed at 100, yet all maximum chromosome id's were below 4600, and they all used a minimal (Approx $< 5$) number of hidden neurons.
+        \item For 1 stick, the max reaches declined from 50-80\% range for 10 trials and no early stop to 45-62\% for 100 trials and early stopping. I ran 4 training cycles in a row with this parameters, and there still appears to be quite a bit of stochasticity in the max reaches. Overall, 100 trials seemed to harm the performance. Additionally, the chromosome IDs after early stopping were in the range 3718-5016, all with minimal (approx 6) hidden neurons and limited structure complexity compared to the previous id range of 3691-299141 and hidden neurons of approx 20-260.
+        \item For 2 sticks, using 100 trials instead of 10 harmed the reaches performance similar to the pattern observed for 1 stick.
+    \end{itemize}
+    \item I experimented with different ways to get the Pc and Z score. 
+    \begin{itemize}
+        \item If I used both positive and negative weights, then the values weren't in the correct value range (Pc was negative, which didn't correspond to original Guimera definition). 
+        \item If I used only positive weights or all weights but absolute value, then it was able to successfully calculate both scores. 
+        \item For the absolute value version, the Pc scores were a lot more nuanced, getting ranges between 0-1 instead of just 0 and 1. 
+    \end{itemize}
+    \item I was able to run the new topology calculations across all of my chromosomes. 
+    \item From the topology data, I observed consistent overlap between  which nodes were chosen as hubs based on stick type. 
+    \begin{itemize}
+        \item 0 sticks had hubs for angle from end effector to target, and both limit detectors. 
+        \item 1 stick had hubs for angle of 2nd joint, angle to stick 1, and sometimes distance from end effector to target. 
+        \item 2 sticks had hubs for both arm angles, angle to stick 1, distance to stick 2.
+    \end{itemize} 
+    \item Connection back to research questions: by finding consistent hubs and tracking the cause of activation in those hubs, it may be possible to find human-interpretable features for the strongest factors in model learning.
+    \item Made a correlation matrix similar to Frietag paper
+    \item Questions to Answer:
+    \begin{itemize}
+        \item Do more complex tasks result in more hubs? \textbf{No}
+        \item Do more complex tasks result in denser hubs? \textbf{No}
+        \item Do more complex tasks result in a more modular structure overall? \textbf{Difficult to answer because CPM isn't the same as modularity, it changes based on things like network size and density, so it's not really fair to compare across the networks as a measure of modularity.}
+    \end{itemize}
+    \item I started a very rough draft to start writing about the experiments.
+    \item I compiled some examples of neural network analysis being used to study: schizophrenia, Parkinsons and other motor control issues, brain development from childhood to adolescence to adulthood, 
+    \item Read Complex Network Analysis literature and found useful resources such as BCT, BCTPY, Louvain method, and Leiden method, and how various metrics have been applied to brain networks.
+    \item Created a topology version of the dashboard that displays 0 sticks, 1 stick and 2 sticks side-by-side. It contains graphs for fitness, reaches, \# hidden nodes, and \# connections. 
+    \item Examined outliers in the topology dashboard and discovered an overfitting problem.
+    \item Created a heatmap visualization for the adjacency matrix
+    \item Experimented with Louvain and Leiden methods for finding modules in the network. I rearranged the heatmap ordering to illustrate the modules.
+    \item Created a histogram to observe frequency of degree-in, degree-out, and in+out for a particular chromosome.
+    \item Wrote README documentation for Java application and all current Python utilities.
+    \item Created presentation slides for the project.
+    \item Got previous tool use program running and started experimenting to understand the various parameters. 
+    \item Changed program from JFrames to JPanels so that the animation would stop flickering.
+    \item Added a graphical 3rd layer and a second tool that is randomly placed in the correct range
+    \item Found some reference papers for different aspects of the project: examples of robotics using neural networks to evolve tool use, psychological theories on tools developing cognitive schemas in children, brain network papers relating modularity and functionality in the brain, and graph theory techniques about measure modularity in neural networks.
+    \item Added functionality for second stick, as well as added mechanism to switch between 0, 1, and 2 sticks.
+    \item Explored the current XML system, and determined that it is no longer usable/supported. 
+    \item Created a CSV logger system that records different types of training data.
+    \item Created a python dashboard to add visualizations for the recorded CSV data.
+    \item I confirmed the theory that the two sticks version requires more timesteps to increase the fitness.
+    \item I added a dashboard log for percentages of reaches per trials.
+        \item Added a dashboard log to view the percentage of reaches for the highest-performing chromosome of each generation. (Scatter plot and trendline) 
+    \item Created a python utility to copy the top [n] highest-performing chromosomes to a separate folder and view the visualization for the top chromosome.
+    \item Tested various fitness criteria 
+        \item Fixing the flawed distance criteria to correctly adapt to the changing maximum stick reach.
+        \item I normalized all values to [0.5,1] as suggested by Frietag paper.
+        \begin{itemize}
+            \item For two sticks, going from DS to DSTT gained ~2\% average reach and ~10\% max reach. 
+        \end{itemize}
+    \item Recorded a video of the two sticks working.
+    \item Added an XML parser to the python utility that analyzes each of the highest-performing chromosomes and records their attributes in a CSV file. 
+    \item Added an option in the dashboard to switch between fitness and topology graphs.
+    \item Added a topology graph to view number of hidden neurons per chromosome top performer.
+    \item Parsed chromosome XML file into an adjacency matrix.
+\end{itemize}
+
+\section{Readings}
+\textbf{Search terms:} tool use, ontogeny, cognitive development, sensorimotor schema, experience-dependent neuroplasticity, connectome, modularity, topology
+
+\textbf{Things to look up: } Common tasks given to babies to develop tool use problem solving
+
+\subsection{Rubinov and Sporns \cite{rubinov_complex_2010}}
+Brain Connectivity Toolkit
+Python BCTPY: \cite{laplante_bctpy_nodate}
+
+\subsection{Louvain Communities}
+\cite{blondel_fast_2008}
+
+\subsection{Leiden Communities}
+\cite{traag_louvain_2019}
+
+\subsection{Classifying Nodes}
+The hubness of a node can be defined by its within-module degree: If a given node i has a value of $z_i > 2.5$. It is classified as a hub, otherwise as a non-hub. 
+
+The limits for the participation coefficient are different for hubs and non-hubs. For non-hubs, if a given node has value $0 < Pi < 0.05$, the node is classified as an ultraperipheral node, $0.05 < Pi < 0.62$ corresponds to a peripheral node, $0.62 < Pi < 0.80$ corresponds to a connector node, and $0.80 < Pi < 1.0$ is a kinless node. For hubs, $0 < Pi < 0.30$ corresponds to a provincial hub, $0.30 < Pi < 0.75$ corresponds to a connector hub, and $0.75 < Pi < 1.0$ is a kinless hub \cite{meunier_hierarchical_2009}.
+
+\cite{reams_emergence_2017}, \cite{freitag_analysis_2016}
+\subsection{The Connectomics of Brain Disorders \cite{fornito_connectomics_2015}}
+"These properties include a short average path-length between nodes, which enables efficient communication (that is, a parallel and integrated topology), coupled with low wiring cost [158,159]; a heavy-tailed distribution of regional connectivity, which implies the existence of highly connected hub regions [27,111]; strong interconnectivity of hub regions, defining a topologically central core, or rich club [113,126]; and high clustering and hierarchical modularity across multiple resolution scales, which supports functional specialization [160]."
+
+\subsection{Emergence of tool use in an articulated limb controlled by evolved neural circuits \cite{li_emergence_2015}}
+
+The original paper that was written about the tool use program by Dr Choe and his students.
+
+\subsection {A Survey of the Ontogeny of Tool Use: From Sensorimotor Experience to Planning \cite{guerin_survey_2013}}
+
+This article connects the developmental models of infants as a means to develop better artificial intelligence robotics that have the ability to develop tool use in a similar manner to the human brain.
+
+\subsection {Overlapping Waves Theory \cite{chen_ii_2000}}
+A theory postulating that when children are acquiring new skills, there's an extended period of time where there is an overlap of cognitive schemas related to different strategies of problem solving. This can lead to children potentially solving something the "non-ideal" way for a while, in order to continue experimenting with new techniques. Overall, this leads to a more robust problem-solving ability. 
+
+\subsection{Learning Task-Oriented Grasping for Tool
+Manipulation from Simulated Self-Supervision \cite{fang_learning_2018}}
+
+A robotic training for an arm learning to grasp and use tools in various ways, specifically sweeping and hammering.
+
+\subsection{Modular Segregation of Structural Brain Networks Supports the Development of Executive Function in Youth \cite{baum_modular_2017}}
+
+This paper argues that there's a correlation between increased modularity in the brain and improved executive function. It could provide a good method for analyzing a network to quantify modularity. 
+
+\subsection{Communication dynamics in complex brain networks \cite{avena-koenigsberger_communication_2018}}
+
+This paper analyzes the interdependencies between the topology of the brain and communication dynamics.
+
+\subsection{Functional cartography of complex metabolic networks \cite{guimera_functional_2005}}
+
+This paper is from 2005, but is very highly cited, particularly in neuroscience papers that are trying to identify functional connections in the brain. It introduces a measure of "participation coefficient" which identifies how connected a node is within its module.
+
+\subsection{Evidence for Hubs in Human Functional Brain Networks \cite{power_evidence_2013}}
+
+An example of using participation coefficients from \cite{guimera_functional_2005} to identify hubs in the brain.
+
+\subsection{Tool mastering today – an interdisciplinary perspective \cite{schubotz_tool_2023}}
+This paper brings together many perspectives of tool use from various disciplines: cognitive neuroscience, developmental and comparative psychology, archaeology, ethology, robotics, neurology, and ergonomics.
+Good avenue for more potential sources in different disciplines.
+One of the questions this paper aims to answer: Which insights in the cognitive architecture come from robots or computational models that learn to recognize, select, and purposefully use tools?
+
+    
+\section{Key Terms}
+\begin{itemize}
+    \item \textbf{Ontogeny: } The branch of biology that deals with the development of an individual organism or anatomical or behavioral feature from the earliest stage to maturity.
+    \item \textbf{Sensorimotor Schema: } a foundational mental and physical framework for understanding the world, formed by an infant's sensory experiences and motor actions, such as sucking or grasping, to gain knowledge about objects and their effects in the environment.
+\end{itemize}
+
+
+
+\bibliography{resources}
+\bibliographystyle{IEEEtran}
+
+\end{document}

@@ -1,0 +1,38 @@
+<chromosome id="10137" primary-parent-id="10007"><neuron id="7952" type="in" activation="linear"/>
+<neuron id="7953" type="in" activation="linear"/>
+<neuron id="7954" type="in" activation="linear"/>
+<neuron id="7955" type="in" activation="linear"/>
+<neuron id="7956" type="in" activation="linear"/>
+<neuron id="7957" type="in" activation="linear"/>
+<neuron id="7958" type="in" activation="linear"/>
+<neuron id="7959" type="in" activation="linear"/>
+<neuron id="7960" type="in" activation="linear"/>
+<neuron id="7961" type="in" activation="linear"/>
+<neuron id="7962" type="out" activation="sigmoid"/>
+<connection id="7963" src-id="7952" dest-id="7962" weight="-4.157921636622593"/>
+<connection id="7964" src-id="7953" dest-id="7962" weight="3.096098130330252"/>
+<connection id="7965" src-id="7954" dest-id="7962" weight="3.58901464385817"/>
+<connection id="7966" src-id="7955" dest-id="7962" weight="-6.752817706416578"/>
+<connection id="7967" src-id="7956" dest-id="7962" weight="-1.4442515580241317"/>
+<connection id="7968" src-id="7957" dest-id="7962" weight="-7.069909872213021"/>
+<connection id="7969" src-id="7958" dest-id="7962" weight="4.438925101039379"/>
+<connection id="7971" src-id="7960" dest-id="7962" weight="-4.769871268493526"/>
+<neuron id="7973" type="out" activation="sigmoid"/>
+<connection id="7974" src-id="7952" dest-id="7973" weight="-9.405207683973805"/>
+<connection id="7976" src-id="7954" dest-id="7973" weight="8.047471712566763"/>
+<connection id="7978" src-id="7956" dest-id="7973" weight="-8.50656610638684"/>
+<connection id="7980" src-id="7958" dest-id="7973" weight="-0.4876549994464642"/>
+<connection id="7981" src-id="7959" dest-id="7973" weight="4.127754971075332"/>
+<connection id="7982" src-id="7960" dest-id="7973" weight="0.4078612495240468"/>
+<connection id="7983" src-id="7961" dest-id="7973" weight="5.030644797929216"/>
+<connection id="8137" src-id="7962" dest-id="7973" weight="0.8972441205009304"/>
+<neuron id="8206" type="hid" activation="sigmoid"/>
+<connection id="8207" src-id="7953" dest-id="8206" weight="-3.407690950950321"/>
+<connection id="8208" src-id="8206" dest-id="7973" weight="-2.1441135152196815"/>
+<neuron id="8340" type="hid" activation="sigmoid"/>
+<connection id="8341" src-id="7957" dest-id="8340" weight="6.193859831851248"/>
+<connection id="8342" src-id="8340" dest-id="7973" weight="4.612175830416862"/>
+<connection id="8729" src-id="7962" dest-id="8206" weight="-0.5976724624633789"/>
+<connection id="9883" src-id="8340" dest-id="8206" weight="1.0260093208242813"/>
+<connection id="9971" src-id="8340" dest-id="7962" weight="3.591385081040648"/>
+</chromosome>

@@ -1,0 +1,34 @@
+<chromosome id="17187" primary-parent-id="9443"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="in" activation="linear"/>
+<neuron id="4" type="in" activation="linear"/>
+<neuron id="5" type="out" activation="tanh"/>
+<connection id="7" src-id="1" dest-id="5" weight="2.0"/>
+<connection id="8" src-id="2" dest-id="5" weight="1.4939409729390078"/>
+<neuron id="11" type="out" activation="tanh"/>
+<connection id="12" src-id="0" dest-id="11" weight="0.47653214205515493"/>
+<connection id="13" src-id="1" dest-id="11" weight="-2.0"/>
+<connection id="15" src-id="3" dest-id="11" weight="-0.4063878225166604"/>
+<connection id="16" src-id="4" dest-id="11" weight="1.958622608812017"/>
+<neuron id="258" type="hid" activation="tanh"/>
+<connection id="259" src-id="2" dest-id="258" weight="2.0"/>
+<connection id="260" src-id="258" dest-id="11" weight="0.224402009445629"/>
+<neuron id="261" type="hid" activation="tanh"/>
+<connection id="262" src-id="0" dest-id="261" weight="0.9766079210819565"/>
+<connection id="263" src-id="261" dest-id="5" weight="-2.0"/>
+<connection id="442" src-id="4" dest-id="258" weight="-0.6055017571131042"/>
+<neuron id="458" type="hid" activation="tanh"/>
+<connection id="459" src-id="3" dest-id="458" weight="1.939672869721798"/>
+<connection id="460" src-id="458" dest-id="5" weight="-2.0"/>
+<connection id="646" src-id="0" dest-id="258" weight="-1.752199429334718"/>
+<connection id="648" src-id="3" dest-id="261" weight="2.0"/>
+<connection id="874" src-id="458" dest-id="458" weight="0.2243523665403533"/>
+<connection id="882" src-id="261" dest-id="11" weight="0.25158344933183435"/>
+<connection id="1074" src-id="458" dest-id="261" weight="-0.8779832124710083"/>
+<connection id="1089" src-id="5" dest-id="261" weight="-1.4591893497959028"/>
+<neuron id="2776" type="hid" activation="tanh"/>
+<connection id="2777" src-id="5" dest-id="2776" weight="0.45257503508637287"/>
+<connection id="2778" src-id="2776" dest-id="258" weight="0.8458179215323538"/>
+<connection id="11542" src-id="2776" dest-id="11" weight="-0.5873111462786724"/>
+</chromosome>
